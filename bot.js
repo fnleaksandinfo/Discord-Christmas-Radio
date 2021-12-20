@@ -57,7 +57,7 @@ async function playSongs(connection) {
     const dispatcher = await connection.play(songDirectory + songs[lastSong]);
     client.user.setPresence({
         activity: {
-            name: songs[lastSong].replace(/.\s*$/, ""),
+            name: songs[lastSong].replace(/.([^.]*)$/, ""),
             type: "PLAYING"
         },
         status: "ONLINE"
