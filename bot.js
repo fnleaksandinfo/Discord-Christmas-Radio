@@ -17,8 +17,9 @@ client.on('ready', async () => {
 });
 
 client.on('message', async message => {
-    if(message.author.bot) return;
-    switch (message.content.toLowerCase()) {
+    if(message.author.bot || !message.content.toLowerCase().startsWith(botPrefix)) return;
+    var cmd = message.content.toLowerCase().split(' ')?.[0];
+    switch (cmd) {
         case botPrefix + "play": {
             if (!message.member.voice.channel)
                 return message.reply("You're not currently in a voice channel! ‼");
