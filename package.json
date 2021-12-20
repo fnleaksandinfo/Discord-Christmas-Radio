@@ -1,0 +1,20 @@
+{
+  "name": "christmasradiodiscordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "repository": {
+    "url": "https://github.com/fnleaksandinfo/Discord-Christmas-Radio"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max // FNLeaksAndInfo",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.6.0",
+    "discord.js": "^12.5.2",
+    "dotenv": "^10.0.0",
+    "opusscript": "0.0.8"
+  }
+}
