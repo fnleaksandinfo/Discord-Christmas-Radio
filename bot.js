@@ -16,6 +16,7 @@ client.on('ready', async () => {
 });
 
 client.on('message', async message => {
+    if(message.author.bot) return;
     switch (message.content.toLowerCase()) {
         case "**play": {
             if (!message.member.voice.channel)
@@ -41,8 +42,7 @@ client.on('message', async message => {
             await playSongs(await message.member.voice.channel.join());
             return message.reply("Skipped current song! ⏩");
         }
-        case "**help":
-        default: {
+        case "**help": {
             return message.reply(":christmas_tree:  **Christmas Radio Commands**\n\n`**play` - Join your voice channel and play tunes.\n`**stop` - Leave your voice channel.\n`**skip` - Skip the current song.\n`**help` - View this message.\n\nDeveloped by Max (335278932817346570).");
         }
     }
